@@ -14,6 +14,7 @@ Service running as Local System for access to IIS Management subsystem.
  4. Configurable interval between notification of consul through application configuration value using configuration/appSettings/add[@key='TimeSpanBetweenNotification'] value in seconds.
  5. Consul endpoint determining by configuration value using configuration/appSettings/add[@key='ConsulEndpoint'].
  6. Type of site can be only www. Traefik doesn't support nowadays other services like FTP.
+ 7. Logging to Windows EventLog system.
 
 ## Things need to be done ##
  1. Real-time notification about launching/stopping sites.
@@ -41,6 +42,28 @@ Specify "TimeSpanBetweenNotification" value in seconds for application config - 
 ```xml
 <add key="TimeSpanBetweenNotification" value="90" />
 ```
+
+Then you can run application like a usual console app or install it as a service using [Topshelf](http://topshelf-project.com/) provided 
+functionality - 
+
+For install:
+
+```
+ConsulNotifier.exe install
+```
+
+After installation you can run service by executing following command:
+
+```
+ConsulNotifier.exe start
+```
+
+Or if you want to uninstall service from service registry (```services.msc```), please run following command:
+
+```
+ConsulNotifier.exe uninstall
+```
+
 
 ### Contributors ###
 Saritasa LLC
