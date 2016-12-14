@@ -25,7 +25,7 @@ Service running as Local System for access to IIS Management subsystem.
 
 ## Used frameworks/technologies ##
   1. [Topshelf](http://topshelf-project.com/)
-  2. [Serilog](serilog.net)
+  2. [Serilog](http://serilog.net/)
   3. [Microsoft.Web.Administration](https://msdn.microsoft.com/en-us/library/microsoft.web.administration(v=vs.90).aspx)
 
 ## Usage ##
