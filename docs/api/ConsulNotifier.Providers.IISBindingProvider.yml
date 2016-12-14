@@ -1,0 +1,513 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsulNotifier.Providers.IISBindingProvider
+  commentId: T:ConsulNotifier.Providers.IISBindingProvider
+  id: IISBindingProvider
+  parent: ConsulNotifier.Providers
+  children:
+  - ConsulNotifier.Providers.IISBindingProvider.GetRunningEndpointsInformation
+  langs:
+  - csharp
+  - vb
+  name: IISBindingProvider
+  nameWithType: IISBindingProvider
+  fullName: ConsulNotifier.Providers.IISBindingProvider
+  type: Class
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T07:05:56.0259343Z
+    id: IISBindingProvider
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/IISBindingProvider.cs
+    startLine: 7
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  example: []
+  syntax:
+    content: 'public class IISBindingProvider : IBindingProvider'
+    content.vb: >-
+      Public Class IISBindingProvider
+          Implements IBindingProvider
+  inheritance:
+  - System.Object
+  implements:
+  - ConsulNotifier.Providers.IBindingProvider
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ConsulNotifier.Providers.IISBindingProvider.GetRunningEndpointsInformation
+  commentId: M:ConsulNotifier.Providers.IISBindingProvider.GetRunningEndpointsInformation
+  id: GetRunningEndpointsInformation
+  parent: ConsulNotifier.Providers.IISBindingProvider
+  langs:
+  - csharp
+  - vb
+  name: GetRunningEndpointsInformation()
+  nameWithType: IISBindingProvider.GetRunningEndpointsInformation()
+  fullName: ConsulNotifier.Providers.IISBindingProvider.GetRunningEndpointsInformation()
+  type: Method
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T07:05:56.0259343Z
+    id: GetRunningEndpointsInformation
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/IISBindingProvider.cs
+    startLine: 10
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  example: []
+  syntax:
+    content: public IEnumerable<EndpointInformation> GetRunningEndpointsInformation()
+    content.vb: Public Function GetRunningEndpointsInformation As IEnumerable(Of EndpointInformation)
+    return:
+      type: System.Collections.Generic.IEnumerable{ConsulNotifier.Providers.EndpointInformation}
+  overload: ConsulNotifier.Providers.IISBindingProvider.GetRunningEndpointsInformation*
+  implements:
+  - ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ConsulNotifier.Providers
+  commentId: N:ConsulNotifier.Providers
+  isExternal: false
+  name: ConsulNotifier.Providers
+  nameWithType: ConsulNotifier.Providers
+  fullName: ConsulNotifier.Providers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: ConsulNotifier.Providers.IBindingProvider
+  commentId: T:ConsulNotifier.Providers.IBindingProvider
+  parent: ConsulNotifier.Providers
+  isExternal: false
+  name: IBindingProvider
+  nameWithType: IBindingProvider
+  fullName: ConsulNotifier.Providers.IBindingProvider
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConsulNotifier.Providers.IISBindingProvider.GetRunningEndpointsInformation*
+  commentId: Overload:ConsulNotifier.Providers.IISBindingProvider.GetRunningEndpointsInformation
+  isExternal: false
+  name: GetRunningEndpointsInformation
+  nameWithType: IISBindingProvider.GetRunningEndpointsInformation
+  fullName: ConsulNotifier.Providers.IISBindingProvider.GetRunningEndpointsInformation
+- uid: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+  commentId: M:ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+  parent: ConsulNotifier.Providers.IBindingProvider
+  isExternal: false
+  name: GetRunningEndpointsInformation()
+  nameWithType: IBindingProvider.GetRunningEndpointsInformation()
+  fullName: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation()
+  spec.csharp:
+  - uid: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+    name: GetRunningEndpointsInformation
+    nameWithType: IBindingProvider.GetRunningEndpointsInformation
+    fullName: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+    name: GetRunningEndpointsInformation
+    nameWithType: IBindingProvider.GetRunningEndpointsInformation
+    fullName: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{ConsulNotifier.Providers.EndpointInformation}
+  commentId: T:System.Collections.Generic.IEnumerable{ConsulNotifier.Providers.EndpointInformation}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<EndpointInformation>
+  nameWithType: IEnumerable<EndpointInformation>
+  fullName: System.Collections.Generic.IEnumerable<ConsulNotifier.Providers.EndpointInformation>
+  nameWithType.vb: IEnumerable(Of EndpointInformation)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of ConsulNotifier.Providers.EndpointInformation)
+  name.vb: IEnumerable(Of EndpointInformation)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ConsulNotifier.Providers.EndpointInformation
+    name: EndpointInformation
+    nameWithType: EndpointInformation
+    fullName: ConsulNotifier.Providers.EndpointInformation
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ConsulNotifier.Providers.EndpointInformation
+    name: EndpointInformation
+    nameWithType: EndpointInformation
+    fullName: ConsulNotifier.Providers.EndpointInformation
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

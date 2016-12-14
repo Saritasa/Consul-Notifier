@@ -1,0 +1,167 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsulNotifier.Providers.IBindingProvider
+  commentId: T:ConsulNotifier.Providers.IBindingProvider
+  id: IBindingProvider
+  parent: ConsulNotifier.Providers
+  children:
+  - ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+  langs:
+  - csharp
+  - vb
+  name: IBindingProvider
+  nameWithType: IBindingProvider
+  fullName: ConsulNotifier.Providers.IBindingProvider
+  type: Interface
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:56:22.1762993Z
+    id: IBindingProvider
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/IBindingProvider.cs
+    startLine: 7
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nBindings provider.\n"
+  example: []
+  syntax:
+    content: public interface IBindingProvider
+    content.vb: Public Interface IBindingProvider
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+  commentId: M:ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+  id: GetRunningEndpointsInformation
+  parent: ConsulNotifier.Providers.IBindingProvider
+  langs:
+  - csharp
+  - vb
+  name: GetRunningEndpointsInformation()
+  nameWithType: IBindingProvider.GetRunningEndpointsInformation()
+  fullName: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation()
+  type: Method
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:56:22.1762993Z
+    id: GetRunningEndpointsInformation
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/IBindingProvider.cs
+    startLine: 12
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nReturning information about endpoints.\n"
+  example: []
+  syntax:
+    content: IEnumerable<EndpointInformation> GetRunningEndpointsInformation()
+    content.vb: Function GetRunningEndpointsInformation As IEnumerable(Of EndpointInformation)
+    return:
+      type: System.Collections.Generic.IEnumerable{ConsulNotifier.Providers.EndpointInformation}
+  overload: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation*
+references:
+- uid: ConsulNotifier.Providers
+  commentId: N:ConsulNotifier.Providers
+  isExternal: false
+  name: ConsulNotifier.Providers
+  nameWithType: ConsulNotifier.Providers
+  fullName: ConsulNotifier.Providers
+- uid: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation*
+  commentId: Overload:ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+  isExternal: false
+  name: GetRunningEndpointsInformation
+  nameWithType: IBindingProvider.GetRunningEndpointsInformation
+  fullName: ConsulNotifier.Providers.IBindingProvider.GetRunningEndpointsInformation
+- uid: System.Collections.Generic.IEnumerable{ConsulNotifier.Providers.EndpointInformation}
+  commentId: T:System.Collections.Generic.IEnumerable{ConsulNotifier.Providers.EndpointInformation}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<EndpointInformation>
+  nameWithType: IEnumerable<EndpointInformation>
+  fullName: System.Collections.Generic.IEnumerable<ConsulNotifier.Providers.EndpointInformation>
+  nameWithType.vb: IEnumerable(Of EndpointInformation)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of ConsulNotifier.Providers.EndpointInformation)
+  name.vb: IEnumerable(Of EndpointInformation)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ConsulNotifier.Providers.EndpointInformation
+    name: EndpointInformation
+    nameWithType: EndpointInformation
+    fullName: ConsulNotifier.Providers.EndpointInformation
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ConsulNotifier.Providers.EndpointInformation
+    name: EndpointInformation
+    nameWithType: EndpointInformation
+    fullName: ConsulNotifier.Providers.EndpointInformation
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

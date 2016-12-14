@@ -1,0 +1,629 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsulNotifier.WindowsServiceHost
+  commentId: T:ConsulNotifier.WindowsServiceHost
+  id: WindowsServiceHost
+  parent: ConsulNotifier
+  children:
+  - ConsulNotifier.WindowsServiceHost.IsDebugLevelKey
+  - ConsulNotifier.WindowsServiceHost.Start(Topshelf.HostControl)
+  - ConsulNotifier.WindowsServiceHost.Stop(Topshelf.HostControl)
+  - ConsulNotifier.WindowsServiceHost.TimeSpanBetweenNotificationConfigKey
+  langs:
+  - csharp
+  - vb
+  name: WindowsServiceHost
+  nameWithType: WindowsServiceHost
+  fullName: ConsulNotifier.WindowsServiceHost
+  type: Class
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:35:14.5898640Z
+    id: WindowsServiceHost
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/WindowsServiceHost.cs
+    startLine: 12
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier
+  summary: "\nMain entry point for windows service host.\n"
+  example: []
+  syntax:
+    content: 'public class WindowsServiceHost : ServiceControl'
+    content.vb: >-
+      Public Class WindowsServiceHost
+          Implements ServiceControl
+  inheritance:
+  - System.Object
+  implements:
+  - Topshelf.ServiceControl
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ConsulNotifier.WindowsServiceHost.IsDebugLevelKey
+  commentId: F:ConsulNotifier.WindowsServiceHost.IsDebugLevelKey
+  id: IsDebugLevelKey
+  parent: ConsulNotifier.WindowsServiceHost
+  langs:
+  - csharp
+  - vb
+  name: IsDebugLevelKey
+  nameWithType: WindowsServiceHost.IsDebugLevelKey
+  fullName: ConsulNotifier.WindowsServiceHost.IsDebugLevelKey
+  type: Field
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:35:14.5898640Z
+    id: IsDebugLevelKey
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/WindowsServiceHost.cs
+    startLine: 22
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier
+  summary: "\nDebug level mark key.\n"
+  example: []
+  syntax:
+    content: public const string IsDebugLevelKey = "IsDebugLevel"
+    content.vb: Public Const IsDebugLevelKey As String = "IsDebugLevel"
+    return:
+      type: System.String
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ConsulNotifier.WindowsServiceHost.TimeSpanBetweenNotificationConfigKey
+  commentId: F:ConsulNotifier.WindowsServiceHost.TimeSpanBetweenNotificationConfigKey
+  id: TimeSpanBetweenNotificationConfigKey
+  parent: ConsulNotifier.WindowsServiceHost
+  langs:
+  - csharp
+  - vb
+  name: TimeSpanBetweenNotificationConfigKey
+  nameWithType: WindowsServiceHost.TimeSpanBetweenNotificationConfigKey
+  fullName: ConsulNotifier.WindowsServiceHost.TimeSpanBetweenNotificationConfigKey
+  type: Field
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:35:14.5898640Z
+    id: TimeSpanBetweenNotificationConfigKey
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/WindowsServiceHost.cs
+    startLine: 27
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier
+  summary: "\nKey of configuration value for interval of consul's notification.\n"
+  example: []
+  syntax:
+    content: public const string TimeSpanBetweenNotificationConfigKey = "TimeSpanBetweenNotification"
+    content.vb: Public Const TimeSpanBetweenNotificationConfigKey As String = "TimeSpanBetweenNotification"
+    return:
+      type: System.String
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ConsulNotifier.WindowsServiceHost.Start(Topshelf.HostControl)
+  commentId: M:ConsulNotifier.WindowsServiceHost.Start(Topshelf.HostControl)
+  id: Start(Topshelf.HostControl)
+  parent: ConsulNotifier.WindowsServiceHost
+  langs:
+  - csharp
+  - vb
+  name: Start(HostControl)
+  nameWithType: WindowsServiceHost.Start(HostControl)
+  fullName: ConsulNotifier.WindowsServiceHost.Start(Topshelf.HostControl)
+  type: Method
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:35:14.5898640Z
+    id: Start
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/WindowsServiceHost.cs
+    startLine: 32
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier
+  summary: "\nMain entry point for start of windows service.\n"
+  example: []
+  syntax:
+    content: public bool Start(HostControl hostControl)
+    content.vb: Public Function Start(hostControl As HostControl) As Boolean
+    parameters:
+    - id: hostControl
+      type: Topshelf.HostControl
+    return:
+      type: System.Boolean
+  overload: ConsulNotifier.WindowsServiceHost.Start*
+  implements:
+  - Topshelf.ServiceControl.Start(Topshelf.HostControl)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.WindowsServiceHost.Stop(Topshelf.HostControl)
+  commentId: M:ConsulNotifier.WindowsServiceHost.Stop(Topshelf.HostControl)
+  id: Stop(Topshelf.HostControl)
+  parent: ConsulNotifier.WindowsServiceHost
+  langs:
+  - csharp
+  - vb
+  name: Stop(HostControl)
+  nameWithType: WindowsServiceHost.Stop(HostControl)
+  fullName: ConsulNotifier.WindowsServiceHost.Stop(Topshelf.HostControl)
+  type: Method
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:35:14.5898640Z
+    id: Stop
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/WindowsServiceHost.cs
+    startLine: 77
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier
+  summary: "\nEntry point for service stop.\n"
+  example: []
+  syntax:
+    content: public bool Stop(HostControl hostControl)
+    content.vb: Public Function Stop(hostControl As HostControl) As Boolean
+    parameters:
+    - id: hostControl
+      type: Topshelf.HostControl
+    return:
+      type: System.Boolean
+  overload: ConsulNotifier.WindowsServiceHost.Stop*
+  implements:
+  - Topshelf.ServiceControl.Stop(Topshelf.HostControl)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ConsulNotifier
+  commentId: N:ConsulNotifier
+  isExternal: false
+  name: ConsulNotifier
+  nameWithType: ConsulNotifier
+  fullName: ConsulNotifier
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Topshelf.ServiceControl
+  commentId: T:Topshelf.ServiceControl
+  parent: Topshelf
+  isExternal: true
+  name: ServiceControl
+  nameWithType: ServiceControl
+  fullName: Topshelf.ServiceControl
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Topshelf
+  commentId: N:Topshelf
+  isExternal: false
+  name: Topshelf
+  nameWithType: Topshelf
+  fullName: Topshelf
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ConsulNotifier.WindowsServiceHost.Start*
+  commentId: Overload:ConsulNotifier.WindowsServiceHost.Start
+  isExternal: false
+  name: Start
+  nameWithType: WindowsServiceHost.Start
+  fullName: ConsulNotifier.WindowsServiceHost.Start
+- uid: Topshelf.ServiceControl.Start(Topshelf.HostControl)
+  commentId: M:Topshelf.ServiceControl.Start(Topshelf.HostControl)
+  parent: Topshelf.ServiceControl
+  isExternal: true
+  name: Start(HostControl)
+  nameWithType: ServiceControl.Start(HostControl)
+  fullName: Topshelf.ServiceControl.Start(Topshelf.HostControl)
+  spec.csharp:
+  - uid: Topshelf.ServiceControl.Start(Topshelf.HostControl)
+    name: Start
+    nameWithType: ServiceControl.Start
+    fullName: Topshelf.ServiceControl.Start
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Topshelf.HostControl
+    name: HostControl
+    nameWithType: HostControl
+    fullName: Topshelf.HostControl
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Topshelf.ServiceControl.Start(Topshelf.HostControl)
+    name: Start
+    nameWithType: ServiceControl.Start
+    fullName: Topshelf.ServiceControl.Start
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Topshelf.HostControl
+    name: HostControl
+    nameWithType: HostControl
+    fullName: Topshelf.HostControl
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Topshelf.HostControl
+  commentId: T:Topshelf.HostControl
+  parent: Topshelf
+  isExternal: true
+  name: HostControl
+  nameWithType: HostControl
+  fullName: Topshelf.HostControl
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: ConsulNotifier.WindowsServiceHost.Stop*
+  commentId: Overload:ConsulNotifier.WindowsServiceHost.Stop
+  isExternal: false
+  name: Stop
+  nameWithType: WindowsServiceHost.Stop
+  fullName: ConsulNotifier.WindowsServiceHost.Stop
+- uid: Topshelf.ServiceControl.Stop(Topshelf.HostControl)
+  commentId: M:Topshelf.ServiceControl.Stop(Topshelf.HostControl)
+  parent: Topshelf.ServiceControl
+  isExternal: true
+  name: Stop(HostControl)
+  nameWithType: ServiceControl.Stop(HostControl)
+  fullName: Topshelf.ServiceControl.Stop(Topshelf.HostControl)
+  spec.csharp:
+  - uid: Topshelf.ServiceControl.Stop(Topshelf.HostControl)
+    name: Stop
+    nameWithType: ServiceControl.Stop
+    fullName: Topshelf.ServiceControl.Stop
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Topshelf.HostControl
+    name: HostControl
+    nameWithType: HostControl
+    fullName: Topshelf.HostControl
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Topshelf.ServiceControl.Stop(Topshelf.HostControl)
+    name: Stop
+    nameWithType: ServiceControl.Stop
+    fullName: Topshelf.ServiceControl.Stop
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Topshelf.HostControl
+    name: HostControl
+    nameWithType: HostControl
+    fullName: Topshelf.HostControl
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

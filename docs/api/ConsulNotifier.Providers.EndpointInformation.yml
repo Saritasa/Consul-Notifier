@@ -1,0 +1,579 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsulNotifier.Providers.EndpointInformation
+  commentId: T:ConsulNotifier.Providers.EndpointInformation
+  id: EndpointInformation
+  parent: ConsulNotifier.Providers
+  children:
+  - ConsulNotifier.Providers.EndpointInformation.Address
+  - ConsulNotifier.Providers.EndpointInformation.ApplicationName
+  - ConsulNotifier.Providers.EndpointInformation.HostName
+  - ConsulNotifier.Providers.EndpointInformation.MachineName
+  - ConsulNotifier.Providers.EndpointInformation.Port
+  langs:
+  - csharp
+  - vb
+  name: EndpointInformation
+  nameWithType: EndpointInformation
+  fullName: ConsulNotifier.Providers.EndpointInformation
+  type: Class
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:55:01.9408184Z
+    id: EndpointInformation
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/EndpointInformation.cs
+    startLine: 5
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nInformation of iis endpoint(binding).\n"
+  example: []
+  syntax:
+    content: public class EndpointInformation
+    content.vb: Public Class EndpointInformation
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ConsulNotifier.Providers.EndpointInformation.HostName
+  commentId: P:ConsulNotifier.Providers.EndpointInformation.HostName
+  id: HostName
+  parent: ConsulNotifier.Providers.EndpointInformation
+  langs:
+  - csharp
+  - vb
+  name: HostName
+  nameWithType: EndpointInformation.HostName
+  fullName: ConsulNotifier.Providers.EndpointInformation.HostName
+  type: Property
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:55:01.9408184Z
+    id: HostName
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/EndpointInformation.cs
+    startLine: 11
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nName of web host if specified, otherwise name of machine host.\n"
+  example: []
+  syntax:
+    content: public string HostName { get; set; }
+    content.vb: Public Property HostName As String
+    parameters: []
+    return:
+      type: System.String
+  overload: ConsulNotifier.Providers.EndpointInformation.HostName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.Providers.EndpointInformation.Address
+  commentId: P:ConsulNotifier.Providers.EndpointInformation.Address
+  id: Address
+  parent: ConsulNotifier.Providers.EndpointInformation
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: EndpointInformation.Address
+  fullName: ConsulNotifier.Providers.EndpointInformation.Address
+  type: Property
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:55:01.9408184Z
+    id: Address
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/EndpointInformation.cs
+    startLine: 16
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nIP Address of binding, usually is empty in IIS and here is ip of host.\n"
+  example: []
+  syntax:
+    content: public string Address { get; set; }
+    content.vb: Public Property Address As String
+    parameters: []
+    return:
+      type: System.String
+  overload: ConsulNotifier.Providers.EndpointInformation.Address*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.Providers.EndpointInformation.Port
+  commentId: P:ConsulNotifier.Providers.EndpointInformation.Port
+  id: Port
+  parent: ConsulNotifier.Providers.EndpointInformation
+  langs:
+  - csharp
+  - vb
+  name: Port
+  nameWithType: EndpointInformation.Port
+  fullName: ConsulNotifier.Providers.EndpointInformation.Port
+  type: Property
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:55:01.9408184Z
+    id: Port
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/EndpointInformation.cs
+    startLine: 21
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nRunning port of binding.\n"
+  example: []
+  syntax:
+    content: public int Port { get; set; }
+    content.vb: Public Property Port As Integer
+    parameters: []
+    return:
+      type: System.Int32
+  overload: ConsulNotifier.Providers.EndpointInformation.Port*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.Providers.EndpointInformation.ApplicationName
+  commentId: P:ConsulNotifier.Providers.EndpointInformation.ApplicationName
+  id: ApplicationName
+  parent: ConsulNotifier.Providers.EndpointInformation
+  langs:
+  - csharp
+  - vb
+  name: ApplicationName
+  nameWithType: EndpointInformation.ApplicationName
+  fullName: ConsulNotifier.Providers.EndpointInformation.ApplicationName
+  type: Property
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:55:01.9408184Z
+    id: ApplicationName
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/EndpointInformation.cs
+    startLine: 26
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nName of application in IIS manager.\n"
+  example: []
+  syntax:
+    content: public string ApplicationName { get; set; }
+    content.vb: Public Property ApplicationName As String
+    parameters: []
+    return:
+      type: System.String
+  overload: ConsulNotifier.Providers.EndpointInformation.ApplicationName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.Providers.EndpointInformation.MachineName
+  commentId: P:ConsulNotifier.Providers.EndpointInformation.MachineName
+  id: MachineName
+  parent: ConsulNotifier.Providers.EndpointInformation
+  langs:
+  - csharp
+  - vb
+  name: MachineName
+  nameWithType: EndpointInformation.MachineName
+  fullName: ConsulNotifier.Providers.EndpointInformation.MachineName
+  type: Property
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T06:55:01.9408184Z
+    id: MachineName
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/EndpointInformation.cs
+    startLine: 31
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nName of machine.\n"
+  example: []
+  syntax:
+    content: public string MachineName { get; set; }
+    content.vb: Public Property MachineName As String
+    parameters: []
+    return:
+      type: System.String
+  overload: ConsulNotifier.Providers.EndpointInformation.MachineName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: ConsulNotifier.Providers
+  commentId: N:ConsulNotifier.Providers
+  isExternal: false
+  name: ConsulNotifier.Providers
+  nameWithType: ConsulNotifier.Providers
+  fullName: ConsulNotifier.Providers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConsulNotifier.Providers.EndpointInformation.HostName*
+  commentId: Overload:ConsulNotifier.Providers.EndpointInformation.HostName
+  isExternal: false
+  name: HostName
+  nameWithType: EndpointInformation.HostName
+  fullName: ConsulNotifier.Providers.EndpointInformation.HostName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ConsulNotifier.Providers.EndpointInformation.Address*
+  commentId: Overload:ConsulNotifier.Providers.EndpointInformation.Address
+  isExternal: false
+  name: Address
+  nameWithType: EndpointInformation.Address
+  fullName: ConsulNotifier.Providers.EndpointInformation.Address
+- uid: ConsulNotifier.Providers.EndpointInformation.Port*
+  commentId: Overload:ConsulNotifier.Providers.EndpointInformation.Port
+  isExternal: false
+  name: Port
+  nameWithType: EndpointInformation.Port
+  fullName: ConsulNotifier.Providers.EndpointInformation.Port
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: ConsulNotifier.Providers.EndpointInformation.ApplicationName*
+  commentId: Overload:ConsulNotifier.Providers.EndpointInformation.ApplicationName
+  isExternal: false
+  name: ApplicationName
+  nameWithType: EndpointInformation.ApplicationName
+  fullName: ConsulNotifier.Providers.EndpointInformation.ApplicationName
+- uid: ConsulNotifier.Providers.EndpointInformation.MachineName*
+  commentId: Overload:ConsulNotifier.Providers.EndpointInformation.MachineName
+  isExternal: false
+  name: MachineName
+  nameWithType: EndpointInformation.MachineName
+  fullName: ConsulNotifier.Providers.EndpointInformation.MachineName

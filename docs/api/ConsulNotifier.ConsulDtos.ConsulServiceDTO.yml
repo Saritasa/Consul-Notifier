@@ -1,0 +1,686 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  commentId: T:ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  id: ConsulServiceDTO
+  parent: ConsulNotifier.ConsulDtos
+  children:
+  - ConsulNotifier.ConsulDtos.ConsulServiceDTO.Address
+  - ConsulNotifier.ConsulDtos.ConsulServiceDTO.Id
+  - ConsulNotifier.ConsulDtos.ConsulServiceDTO.Port
+  - ConsulNotifier.ConsulDtos.ConsulServiceDTO.Service
+  - ConsulNotifier.ConsulDtos.ConsulServiceDTO.Tags
+  langs:
+  - csharp
+  - vb
+  name: ConsulServiceDTO
+  nameWithType: ConsulServiceDTO
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  type: Class
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-07T11:13:32.7833494Z
+    id: ConsulServiceDTO
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/ConsulDtos/ConsulServiceDTO.cs
+    startLine: 8
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.ConsulDtos
+  summary: "\nService part of <xref href=\"ConsulNotifier.ConsulDtos.ConsulCatalogRegistryDTO\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public class ConsulServiceDTO
+    content.vb: Public Class ConsulServiceDTO
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Id
+  commentId: P:ConsulNotifier.ConsulDtos.ConsulServiceDTO.Id
+  id: Id
+  parent: ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ConsulServiceDTO.Id
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Id
+  type: Property
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-07T11:13:32.7833494Z
+    id: Id
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/ConsulDtos/ConsulServiceDTO.cs
+    startLine: 13
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.ConsulDtos
+  summary: "\nId of service, must be unique.\n"
+  example: []
+  syntax:
+    content: >-
+      [JsonProperty("ID")]
+
+      public string Id { get; set; }
+    content.vb: >-
+      <JsonProperty("ID")>
+
+      Public Property Id As String
+    parameters: []
+    return:
+      type: System.String
+  overload: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Id*
+  attributes:
+  - type: Newtonsoft.Json.JsonPropertyAttribute
+    ctor: Newtonsoft.Json.JsonPropertyAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: ID
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Service
+  commentId: P:ConsulNotifier.ConsulDtos.ConsulServiceDTO.Service
+  id: Service
+  parent: ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  langs:
+  - csharp
+  - vb
+  name: Service
+  nameWithType: ConsulServiceDTO.Service
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Service
+  type: Property
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-07T11:13:32.7833494Z
+    id: Service
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/ConsulDtos/ConsulServiceDTO.cs
+    startLine: 19
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.ConsulDtos
+  summary: "\nName of Service\n"
+  example: []
+  syntax:
+    content: public string Service { get; set; }
+    content.vb: Public Property Service As String
+    parameters: []
+    return:
+      type: System.String
+  overload: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Service*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Tags
+  commentId: P:ConsulNotifier.ConsulDtos.ConsulServiceDTO.Tags
+  id: Tags
+  parent: ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  langs:
+  - csharp
+  - vb
+  name: Tags
+  nameWithType: ConsulServiceDTO.Tags
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Tags
+  type: Property
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-07T11:13:32.7833494Z
+    id: Tags
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/ConsulDtos/ConsulServiceDTO.cs
+    startLine: 24
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.ConsulDtos
+  summary: "\nTags of service.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<string> Tags { get; set; }
+    content.vb: Public Property Tags As IEnumerable(Of String)
+    parameters: []
+    return:
+      type: System.Collections.Generic.IEnumerable{System.String}
+  overload: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Tags*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Address
+  commentId: P:ConsulNotifier.ConsulDtos.ConsulServiceDTO.Address
+  id: Address
+  parent: ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: ConsulServiceDTO.Address
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Address
+  type: Property
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-07T11:13:32.7833494Z
+    id: Address
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/ConsulDtos/ConsulServiceDTO.cs
+    startLine: 29
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.ConsulDtos
+  summary: "\nAddress of current host.\n"
+  example: []
+  syntax:
+    content: public string Address { get; set; }
+    content.vb: Public Property Address As String
+    parameters: []
+    return:
+      type: System.String
+  overload: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Address*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Port
+  commentId: P:ConsulNotifier.ConsulDtos.ConsulServiceDTO.Port
+  id: Port
+  parent: ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  langs:
+  - csharp
+  - vb
+  name: Port
+  nameWithType: ConsulServiceDTO.Port
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Port
+  type: Property
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-07T11:13:32.7833494Z
+    id: Port
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/ConsulDtos/ConsulServiceDTO.cs
+    startLine: 34
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.ConsulDtos
+  summary: "\nCurrent port of running service.\n"
+  example: []
+  syntax:
+    content: public int Port { get; set; }
+    content.vb: Public Property Port As Integer
+    parameters: []
+    return:
+      type: System.Int32
+  overload: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Port*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: ConsulNotifier.ConsulDtos.ConsulCatalogRegistryDTO
+  commentId: T:ConsulNotifier.ConsulDtos.ConsulCatalogRegistryDTO
+  isExternal: false
+  name: ConsulCatalogRegistryDTO
+  nameWithType: ConsulCatalogRegistryDTO
+  fullName: ConsulNotifier.ConsulDtos.ConsulCatalogRegistryDTO
+- uid: ConsulNotifier.ConsulDtos
+  commentId: N:ConsulNotifier.ConsulDtos
+  isExternal: false
+  name: ConsulNotifier.ConsulDtos
+  nameWithType: ConsulNotifier.ConsulDtos
+  fullName: ConsulNotifier.ConsulDtos
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Id*
+  commentId: Overload:ConsulNotifier.ConsulDtos.ConsulServiceDTO.Id
+  isExternal: false
+  name: Id
+  nameWithType: ConsulServiceDTO.Id
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Service*
+  commentId: Overload:ConsulNotifier.ConsulDtos.ConsulServiceDTO.Service
+  isExternal: false
+  name: Service
+  nameWithType: ConsulServiceDTO.Service
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Service
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Tags*
+  commentId: Overload:ConsulNotifier.ConsulDtos.ConsulServiceDTO.Tags
+  isExternal: false
+  name: Tags
+  nameWithType: ConsulServiceDTO.Tags
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Tags
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: T:System.Collections.Generic.IEnumerable{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<String>
+  nameWithType: IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: IEnumerable(Of String)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullname.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Address*
+  commentId: Overload:ConsulNotifier.ConsulDtos.ConsulServiceDTO.Address
+  isExternal: false
+  name: Address
+  nameWithType: ConsulServiceDTO.Address
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Address
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Port*
+  commentId: Overload:ConsulNotifier.ConsulDtos.ConsulServiceDTO.Port
+  isExternal: false
+  name: Port
+  nameWithType: ConsulServiceDTO.Port
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO.Port
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

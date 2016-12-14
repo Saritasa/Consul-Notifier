@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsulNotifier.Providers
+  commentId: N:ConsulNotifier.Providers
+  id: ConsulNotifier.Providers
+  children:
+  - ConsulNotifier.Providers.ConsulServiceDescriptor
+  - ConsulNotifier.Providers.ConsulServicesProvider
+  - ConsulNotifier.Providers.EndpointInformation
+  - ConsulNotifier.Providers.IBindingProvider
+  - ConsulNotifier.Providers.IISBindingProvider
+  langs:
+  - csharp
+  - vb
+  name: ConsulNotifier.Providers
+  nameWithType: ConsulNotifier.Providers
+  fullName: ConsulNotifier.Providers
+  type: Namespace
+  assemblies:
+  - ConsulNotifier
+references:
+- uid: ConsulNotifier.Providers.EndpointInformation
+  commentId: T:ConsulNotifier.Providers.EndpointInformation
+  isExternal: false
+  name: EndpointInformation
+  nameWithType: EndpointInformation
+  fullName: ConsulNotifier.Providers.EndpointInformation
+- uid: ConsulNotifier.Providers.ConsulServiceDescriptor
+  commentId: T:ConsulNotifier.Providers.ConsulServiceDescriptor
+  isExternal: false
+  name: ConsulServiceDescriptor
+  nameWithType: ConsulServiceDescriptor
+  fullName: ConsulNotifier.Providers.ConsulServiceDescriptor
+- uid: ConsulNotifier.Providers.ConsulServicesProvider
+  commentId: T:ConsulNotifier.Providers.ConsulServicesProvider
+  parent: ConsulNotifier.Providers
+  isExternal: false
+  name: ConsulServicesProvider
+  nameWithType: ConsulServicesProvider
+  fullName: ConsulNotifier.Providers.ConsulServicesProvider
+- uid: ConsulNotifier.Providers.IBindingProvider
+  commentId: T:ConsulNotifier.Providers.IBindingProvider
+  parent: ConsulNotifier.Providers
+  isExternal: false
+  name: IBindingProvider
+  nameWithType: IBindingProvider
+  fullName: ConsulNotifier.Providers.IBindingProvider
+- uid: ConsulNotifier.Providers.IISBindingProvider
+  commentId: T:ConsulNotifier.Providers.IISBindingProvider
+  isExternal: false
+  name: IISBindingProvider
+  nameWithType: IISBindingProvider
+  fullName: ConsulNotifier.Providers.IISBindingProvider
+- uid: ConsulNotifier.Providers
+  commentId: N:ConsulNotifier.Providers
+  isExternal: false
+  name: ConsulNotifier.Providers
+  nameWithType: ConsulNotifier.Providers
+  fullName: ConsulNotifier.Providers

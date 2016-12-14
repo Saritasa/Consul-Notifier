@@ -1,0 +1,33 @@
+### YamlMime:TableOfContent
+- uid: ConsulNotifier
+  name: ConsulNotifier
+  items:
+  - uid: ConsulNotifier.Notifier
+    name: Notifier
+  - uid: ConsulNotifier.WindowsServiceHost
+    name: WindowsServiceHost
+- uid: ConsulNotifier.ConsulDtos
+  name: ConsulNotifier.ConsulDtos
+  items:
+  - uid: ConsulNotifier.ConsulDtos.ConsulCatalogRegistryDTO
+    name: ConsulCatalogRegistryDTO
+  - uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO
+    name: ConsulServiceDTO
+- uid: ConsulNotifier.Extensions
+  name: ConsulNotifier.Extensions
+  items:
+  - uid: ConsulNotifier.Extensions.ServerManagerExtensions
+    name: ServerManagerExtensions
+- uid: ConsulNotifier.Providers
+  name: ConsulNotifier.Providers
+  items:
+  - uid: ConsulNotifier.Providers.ConsulServiceDescriptor
+    name: ConsulServiceDescriptor
+  - uid: ConsulNotifier.Providers.ConsulServicesProvider
+    name: ConsulServicesProvider
+  - uid: ConsulNotifier.Providers.EndpointInformation
+    name: EndpointInformation
+  - uid: ConsulNotifier.Providers.IBindingProvider
+    name: IBindingProvider
+  - uid: ConsulNotifier.Providers.IISBindingProvider
+    name: IISBindingProvider

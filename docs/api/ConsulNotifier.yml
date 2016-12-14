@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsulNotifier
+  commentId: N:ConsulNotifier
+  id: ConsulNotifier
+  children:
+  - ConsulNotifier.Notifier
+  - ConsulNotifier.WindowsServiceHost
+  langs:
+  - csharp
+  - vb
+  name: ConsulNotifier
+  nameWithType: ConsulNotifier
+  fullName: ConsulNotifier
+  type: Namespace
+  assemblies:
+  - ConsulNotifier
+references:
+- uid: ConsulNotifier.Notifier
+  commentId: T:ConsulNotifier.Notifier
+  isExternal: false
+  name: Notifier
+  nameWithType: Notifier
+  fullName: ConsulNotifier.Notifier
+- uid: ConsulNotifier.WindowsServiceHost
+  commentId: T:ConsulNotifier.WindowsServiceHost
+  isExternal: false
+  name: WindowsServiceHost
+  nameWithType: WindowsServiceHost
+  fullName: ConsulNotifier.WindowsServiceHost

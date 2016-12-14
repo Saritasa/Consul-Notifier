@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsulNotifier.Extensions
+  commentId: N:ConsulNotifier.Extensions
+  id: ConsulNotifier.Extensions
+  children:
+  - ConsulNotifier.Extensions.ServerManagerExtensions
+  langs:
+  - csharp
+  - vb
+  name: ConsulNotifier.Extensions
+  nameWithType: ConsulNotifier.Extensions
+  fullName: ConsulNotifier.Extensions
+  type: Namespace
+  assemblies:
+  - ConsulNotifier
+references:
+- uid: ConsulNotifier.Extensions.ServerManagerExtensions
+  commentId: T:ConsulNotifier.Extensions.ServerManagerExtensions
+  isExternal: false
+  name: ServerManagerExtensions
+  nameWithType: ServerManagerExtensions
+  fullName: ConsulNotifier.Extensions.ServerManagerExtensions

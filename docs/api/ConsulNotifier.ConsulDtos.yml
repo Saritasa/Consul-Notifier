@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsulNotifier.ConsulDtos
+  commentId: N:ConsulNotifier.ConsulDtos
+  id: ConsulNotifier.ConsulDtos
+  children:
+  - ConsulNotifier.ConsulDtos.ConsulCatalogRegistryDTO
+  - ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  langs:
+  - csharp
+  - vb
+  name: ConsulNotifier.ConsulDtos
+  nameWithType: ConsulNotifier.ConsulDtos
+  fullName: ConsulNotifier.ConsulDtos
+  type: Namespace
+  assemblies:
+  - ConsulNotifier
+references:
+- uid: ConsulNotifier.ConsulDtos.ConsulCatalogRegistryDTO
+  commentId: T:ConsulNotifier.ConsulDtos.ConsulCatalogRegistryDTO
+  isExternal: false
+  name: ConsulCatalogRegistryDTO
+  nameWithType: ConsulCatalogRegistryDTO
+  fullName: ConsulNotifier.ConsulDtos.ConsulCatalogRegistryDTO
+- uid: ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  commentId: T:ConsulNotifier.ConsulDtos.ConsulServiceDTO
+  parent: ConsulNotifier.ConsulDtos
+  isExternal: false
+  name: ConsulServiceDTO
+  nameWithType: ConsulServiceDTO
+  fullName: ConsulNotifier.ConsulDtos.ConsulServiceDTO
+- uid: ConsulNotifier.ConsulDtos
+  commentId: N:ConsulNotifier.ConsulDtos
+  isExternal: false
+  name: ConsulNotifier.ConsulDtos
+  nameWithType: ConsulNotifier.ConsulDtos
+  fullName: ConsulNotifier.ConsulDtos

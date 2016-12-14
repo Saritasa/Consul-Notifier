@@ -1,0 +1,718 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsulNotifier.Providers.ConsulServicesProvider
+  commentId: T:ConsulNotifier.Providers.ConsulServicesProvider
+  id: ConsulServicesProvider
+  parent: ConsulNotifier.Providers
+  children:
+  - ConsulNotifier.Providers.ConsulServicesProvider.#ctor(Serilog.ILogger)
+  - ConsulNotifier.Providers.ConsulServicesProvider.ConsulEndpointConfigurationKey
+  - ConsulNotifier.Providers.ConsulServicesProvider.RetrieiveCurrentServicesDescriptorsAsync
+  - ConsulNotifier.Providers.ConsulServicesProvider.RetrieveServiceNamesFromNodeAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ConsulServicesProvider
+  nameWithType: ConsulServicesProvider
+  fullName: ConsulNotifier.Providers.ConsulServicesProvider
+  type: Class
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T07:13:44.0031301Z
+    id: ConsulServicesProvider
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/ConsulServicesProvider.cs
+    startLine: 25
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nRetrieving information about <xref href=\"ConsulNotifier.Providers.ConsulServiceDescriptor\" data-throw-if-not-resolved=\"false\"></xref>\nwhich contains existing services data.\n"
+  remarks: "\nUsage:\n```C#\nvar consulServicesProvider = new ConsulServicesProvider(_logger);\nvar descriptors = consulServicesProvider.RetrieiveCurrentServiceDescriptors();\n```\n"
+  example: []
+  syntax:
+    content: public class ConsulServicesProvider
+    content.vb: Public Class ConsulServicesProvider
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: ConsulNotifier.Providers.ConsulServicesProvider.ConsulEndpointConfigurationKey
+  commentId: F:ConsulNotifier.Providers.ConsulServicesProvider.ConsulEndpointConfigurationKey
+  id: ConsulEndpointConfigurationKey
+  parent: ConsulNotifier.Providers.ConsulServicesProvider
+  langs:
+  - csharp
+  - vb
+  name: ConsulEndpointConfigurationKey
+  nameWithType: ConsulServicesProvider.ConsulEndpointConfigurationKey
+  fullName: ConsulNotifier.Providers.ConsulServicesProvider.ConsulEndpointConfigurationKey
+  type: Field
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T07:13:44.0031301Z
+    id: ConsulEndpointConfigurationKey
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/ConsulServicesProvider.cs
+    startLine: 37
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nConfiguration **key** which **must** be stored with value in **application config**.\n"
+  example: []
+  syntax:
+    content: public const string ConsulEndpointConfigurationKey = "ConsulEndpoint"
+    content.vb: Public Const ConsulEndpointConfigurationKey As String = "ConsulEndpoint"
+    return:
+      type: System.String
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: ConsulNotifier.Providers.ConsulServicesProvider.#ctor(Serilog.ILogger)
+  commentId: M:ConsulNotifier.Providers.ConsulServicesProvider.#ctor(Serilog.ILogger)
+  id: '#ctor(Serilog.ILogger)'
+  parent: ConsulNotifier.Providers.ConsulServicesProvider
+  langs:
+  - csharp
+  - vb
+  name: ConsulServicesProvider(ILogger)
+  nameWithType: ConsulServicesProvider.ConsulServicesProvider(ILogger)
+  fullName: ConsulNotifier.Providers.ConsulServicesProvider.ConsulServicesProvider(Serilog.ILogger)
+  type: Constructor
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T07:13:44.0031301Z
+    id: .ctor
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/ConsulServicesProvider.cs
+    startLine: 45
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nCtor.\n"
+  example: []
+  syntax:
+    content: public ConsulServicesProvider(ILogger logger)
+    content.vb: Public Sub New(logger As ILogger)
+    parameters:
+    - id: logger
+      type: Serilog.ILogger
+  overload: ConsulNotifier.Providers.ConsulServicesProvider.#ctor*
+  exceptions:
+  - type: System.Configuration.ConfigurationErrorsException
+    commentId: T:System.Configuration.ConfigurationErrorsException
+    description: Throws when application has wrong configuration.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.Providers.ConsulServicesProvider.RetrieiveCurrentServicesDescriptorsAsync
+  commentId: M:ConsulNotifier.Providers.ConsulServicesProvider.RetrieiveCurrentServicesDescriptorsAsync
+  id: RetrieiveCurrentServicesDescriptorsAsync
+  parent: ConsulNotifier.Providers.ConsulServicesProvider
+  langs:
+  - csharp
+  - vb
+  name: RetrieiveCurrentServicesDescriptorsAsync()
+  nameWithType: ConsulServicesProvider.RetrieiveCurrentServicesDescriptorsAsync()
+  fullName: ConsulNotifier.Providers.ConsulServicesProvider.RetrieiveCurrentServicesDescriptorsAsync()
+  type: Method
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T07:13:44.0031301Z
+    id: RetrieiveCurrentServicesDescriptorsAsync
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/ConsulServicesProvider.cs
+    startLine: 130
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nRetrieving services from consul endpoint.\n"
+  remarks: "\n\nSample of response -\n\n```javascript\n{\n    \"agent-instance-4500\": [\"udp\"],\n    \"agent-instance-500\": [\"udp\"],\n    \"amcaregivers-backend-develop\": [\"traefik.frontend.rule=Host:amcaregivers-backend.saritasa-hosting.com\", \"traefik.tags=app\", \"traefik.backend.loadbalancer=drr\"]\n}\n```\n"
+  example: []
+  syntax:
+    content: public Task<IEnumerable<ConsulServiceDescriptor>> RetrieiveCurrentServicesDescriptorsAsync()
+    content.vb: Public Function RetrieiveCurrentServicesDescriptorsAsync As Task(Of IEnumerable(Of ConsulServiceDescriptor))
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{ConsulNotifier.Providers.ConsulServiceDescriptor}}
+  overload: ConsulNotifier.Providers.ConsulServicesProvider.RetrieiveCurrentServicesDescriptorsAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: ConsulNotifier.Providers.ConsulServicesProvider.RetrieveServiceNamesFromNodeAsync(System.String)
+  commentId: M:ConsulNotifier.Providers.ConsulServicesProvider.RetrieveServiceNamesFromNodeAsync(System.String)
+  id: RetrieveServiceNamesFromNodeAsync(System.String)
+  parent: ConsulNotifier.Providers.ConsulServicesProvider
+  langs:
+  - csharp
+  - vb
+  name: RetrieveServiceNamesFromNodeAsync(String)
+  nameWithType: ConsulServicesProvider.RetrieveServiceNamesFromNodeAsync(String)
+  fullName: ConsulNotifier.Providers.ConsulServicesProvider.RetrieveServiceNamesFromNodeAsync(System.String)
+  type: Method
+  source:
+    remote:
+      commit:
+        author:
+          date: 2016-12-09T07:13:44.0031301Z
+    id: RetrieveServiceNamesFromNodeAsync
+    path: C:/Users/Arthur/Documents/Visual Studio 2017/Projects/ConsulNotifier/src/ConsulNotifier/Providers/ConsulServicesProvider.cs
+    startLine: 168
+  assemblies:
+  - ConsulNotifier
+  namespace: ConsulNotifier.Providers
+  summary: "\nReturning enumeration of strings like 'helios.umbrella.com-80' where numbers is port of running application\n"
+  example: []
+  syntax:
+    content: public Task<IEnumerable<string>> RetrieveServiceNamesFromNodeAsync(string nodeName)
+    content.vb: Public Function RetrieveServiceNamesFromNodeAsync(nodeName As String) As Task(Of IEnumerable(Of String))
+    parameters:
+    - id: nodeName
+      type: System.String
+      description: Name of node, typicaly name of host machine where running this service.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{System.String}}
+  overload: ConsulNotifier.Providers.ConsulServicesProvider.RetrieveServiceNamesFromNodeAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: ConsulNotifier.Providers.ConsulServiceDescriptor
+  commentId: T:ConsulNotifier.Providers.ConsulServiceDescriptor
+  isExternal: false
+  name: ConsulServiceDescriptor
+  nameWithType: ConsulServiceDescriptor
+  fullName: ConsulNotifier.Providers.ConsulServiceDescriptor
+- uid: ConsulNotifier.Providers
+  commentId: N:ConsulNotifier.Providers
+  isExternal: false
+  name: ConsulNotifier.Providers
+  nameWithType: ConsulNotifier.Providers
+  fullName: ConsulNotifier.Providers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: false
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: ConsulNotifier.Providers.ConsulServicesProvider.#ctor*
+  commentId: Overload:ConsulNotifier.Providers.ConsulServicesProvider.#ctor
+  isExternal: false
+  name: ConsulServicesProvider
+  nameWithType: ConsulServicesProvider.ConsulServicesProvider
+  fullName: ConsulNotifier.Providers.ConsulServicesProvider.ConsulServicesProvider
+- uid: System.Configuration.ConfigurationErrorsException
+  commentId: T:System.Configuration.ConfigurationErrorsException
+- uid: Serilog.ILogger
+  commentId: T:Serilog.ILogger
+  parent: Serilog
+  isExternal: true
+  name: ILogger
+  nameWithType: ILogger
+  fullName: Serilog.ILogger
+- uid: Serilog
+  commentId: N:Serilog
+  isExternal: false
+  name: Serilog
+  nameWithType: Serilog
+  fullName: Serilog
+- uid: ConsulNotifier.Providers.ConsulServicesProvider.RetrieiveCurrentServicesDescriptorsAsync*
+  commentId: Overload:ConsulNotifier.Providers.ConsulServicesProvider.RetrieiveCurrentServicesDescriptorsAsync
+  isExternal: false
+  name: RetrieiveCurrentServicesDescriptorsAsync
+  nameWithType: ConsulServicesProvider.RetrieiveCurrentServicesDescriptorsAsync
+  fullName: ConsulNotifier.Providers.ConsulServicesProvider.RetrieiveCurrentServicesDescriptorsAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{ConsulNotifier.Providers.ConsulServiceDescriptor}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{ConsulNotifier.Providers.ConsulServiceDescriptor}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IEnumerable<ConsulServiceDescriptor>>
+  nameWithType: Task<IEnumerable<ConsulServiceDescriptor>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<ConsulNotifier.Providers.ConsulServiceDescriptor>>
+  nameWithType.vb: Task(Of IEnumerable(Of ConsulServiceDescriptor))
+  fullname.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of ConsulNotifier.Providers.ConsulServiceDescriptor))
+  name.vb: Task(Of IEnumerable(Of ConsulServiceDescriptor))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: ConsulNotifier.Providers.ConsulServiceDescriptor
+    name: ConsulServiceDescriptor
+    nameWithType: ConsulServiceDescriptor
+    fullName: ConsulNotifier.Providers.ConsulServiceDescriptor
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: ConsulNotifier.Providers.ConsulServiceDescriptor
+    name: ConsulServiceDescriptor
+    nameWithType: ConsulServiceDescriptor
+    fullName: ConsulNotifier.Providers.ConsulServiceDescriptor
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullname.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: false
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: ConsulNotifier.Providers.ConsulServicesProvider.RetrieveServiceNamesFromNodeAsync*
+  commentId: Overload:ConsulNotifier.Providers.ConsulServicesProvider.RetrieveServiceNamesFromNodeAsync
+  isExternal: false
+  name: RetrieveServiceNamesFromNodeAsync
+  nameWithType: ConsulServicesProvider.RetrieveServiceNamesFromNodeAsync
+  fullName: ConsulNotifier.Providers.ConsulServicesProvider.RetrieveServiceNamesFromNodeAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{System.String}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IEnumerable{System.String}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<IEnumerable<String>>
+  nameWithType: Task<IEnumerable<String>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.String>>
+  nameWithType.vb: Task(Of IEnumerable(Of String))
+  fullname.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: Task(Of IEnumerable(Of String))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
