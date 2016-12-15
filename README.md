@@ -22,7 +22,6 @@ Service running as Local System for access to IIS Management subsystem.
  3. Configurable tags for registration of service in Consul.
  4. More flexible comparing of host by information from Consul.
  5. Log level segregation.
- 6. Async execution control (e.g. service sending new registrations, but previous request is not ended).
 
 ## Used frameworks/technologies ##
   1. [Topshelf](http://topshelf-project.com/)
