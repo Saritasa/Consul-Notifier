@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
@@ -13,6 +16,7 @@ namespace ConsulNotifier.Extensions
     public static class ServerManagerExtensions
     {
         private const string BindingSchemaName = "binding";
+        public const string NotifyConsulFlagConfigurationKey = "NotifyConsul";
 
         /// <summary>
         /// Getting endpoint information from IIS.
@@ -33,8 +37,13 @@ namespace ConsulNotifier.Extensions
                 }
             }
 
-            foreach (var site in sites.Where(x => x.State == ObjectState.Started))
+            foreach (var site in sites)
             {
+                if (!IsValidSiteForNotification(site))
+                {
+                    continue;
+                }
+
                 foreach (var siteBinding in site.Bindings)
                 {
                     if (siteBinding.Schema.Name != BindingSchemaName)
@@ -52,6 +61,44 @@ namespace ConsulNotifier.Extensions
                     };
                 }
             }
+        }
+
+        private static bool IsValidSiteForNotification(Site site)
+        {
+            var configuration = site.GetWebConfiguration();
+            var notifyConsulFlagRaw = string.Empty;
+            var notifyConsulFlag = false;
+
+            if (site.State != ObjectState.Started)
+            {
+                return false;
+            }
+
+            try
+            {
+                var section = configuration.GetSection("appSettings");
+                var keys = section.GetCollection()
+                    .ToDictionary(x => x.GetAttribute("key"), x => x.GetAttribute("value"));
+
+                foreach (var kvp in keys)
+                {
+                    if (NotifyConsulFlagConfigurationKey == (string)kvp.Key.Value)
+                    {
+                        notifyConsulFlagRaw = (string)kvp.Value.Value;
+                    }
+                }
+
+                if (bool.TryParse(notifyConsulFlagRaw, out notifyConsulFlag) && notifyConsulFlag)
+                {
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+            return false;
         }
     }
 }

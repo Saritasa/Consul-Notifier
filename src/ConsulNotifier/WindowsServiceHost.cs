@@ -147,7 +147,7 @@ namespace ConsulNotifier
             if (!TryGetTimeSpanBetweenNotification(out _timeSpanBetweenNotifications))
             {
                 throw new ConfigurationErrorsException("Can't configure timespan for notifications interval. " +
-                                                       "Please configure it in seconds use " +
+                                                       "Please configure it in seconds using " +
                                                        $"'{TimeSpanBetweenNotificationConfigKey}' as key " +
                                                        "in app or web config");
             }
