@@ -38,7 +38,7 @@ namespace ConsulNotifier
         {
             _bindingProvider = bindingProvider;
             _consulServiceProvider = consulServiceProvider;
-            _logger = logger;
+            _logger = logger.ForContext<Notifier>();
 
             InitializeConfiguraiton();
         }

@@ -42,6 +42,12 @@ Specify "TimeSpanBetweenNotification" value in seconds for application config - 
 <add key="TimeSpanBetweenNotification" value="90" />
 ```
 
+For add site to notification pool you must specify key-value pair described below - 
+
+```xml
+<add key="NotifyConsul" value="true" />
+```
+
 Then you can run application like a usual console app or install it as a service using [Topshelf](http://topshelf-project.com/) provided 
 functionality - 
 
