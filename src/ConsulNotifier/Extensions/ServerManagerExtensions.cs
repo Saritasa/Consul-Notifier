@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using ConsulNotifier.Providers;
 using Microsoft.Web.Administration;
+using Serilog;
 
 namespace ConsulNotifier.Extensions
 {
@@ -19,13 +20,13 @@ namespace ConsulNotifier.Extensions
         /// <summary>
         /// Getting endpoint information from IIS.
         /// </summary>
-        public static IEnumerable<EndpointInformation> GetRunningEndpointsInformation(this ServerManager @this)
+        public static IEnumerable<EndpointInformation> GetRunningEndpointsInformation(this ServerManager @this, ILogger logger)
         {
             var sites = @this.Sites;
 
             var hostIp = string.Empty;
-            var host = Dns.GetHostEntry(Dns.GetHostName());
             var machineName = Dns.GetHostName();
+            var host = Dns.GetHostEntry(machineName);
 
             foreach (var ip in host.AddressList)
             {
@@ -39,6 +40,7 @@ namespace ConsulNotifier.Extensions
             {
                 if (!IsValidSiteForNotification(site))
                 {
+                    logger.Warning("Site is not valid for notification(e.g. not configured notification propagation on configuration of site) {@site}", site);
                     continue;
                 }
 
@@ -46,10 +48,11 @@ namespace ConsulNotifier.Extensions
                 {
                     if (siteBinding.Schema.Name != BindingSchemaName)
                     {
+                        logger.Warning("Binding scheme is not valid, must be {@schemaName}, but {@siteSchema}", BindingSchemaName, siteBinding.Schema.Name);
                         continue;
                     }
 
-                    yield return new EndpointInformation
+                    var endpointInfo = new EndpointInformation
                     {
                         HostName = string.IsNullOrWhiteSpace(siteBinding.Host) ? machineName : siteBinding.Host,
                         Address = siteBinding.EndPoint.Address.GetAddressBytes().All(x => x == 0) ? hostIp : siteBinding.EndPoint.Address.ToString(),
@@ -57,6 +60,10 @@ namespace ConsulNotifier.Extensions
                         ApplicationName = site.Name,
                         MachineName = machineName
                     };
+
+                    logger.Information("Retrieved from IIS endpoint information {@endpoint}", endpointInfo);
+
+                    yield return endpointInfo;
                 }
             }
         }

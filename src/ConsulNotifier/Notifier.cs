@@ -69,7 +69,7 @@ namespace ConsulNotifier
         {
             var consulServices = await _consulServiceProvider.RetrieiveCurrentServicesDescriptorsAsync();
             var consulNodeServiceNames = await _consulServiceProvider.RetrieveServiceNamesFromNodeAsync(NodeName());
-            var currentEndpoints = _bindingProvider.GetRunningEndpointsInformation();
+            var currentEndpoints = _bindingProvider.GetRunningEndpointsInformation(_logger);
             var newServices = new List<EndpointInformation>();
 
             var visitedServiceIds = new List<string>();
@@ -146,8 +146,8 @@ namespace ConsulNotifier
                 {
                     Address = newHostInformation.Address,
                     Port = newHostInformation.Port,
-                    Id = $"{newHostInformation.ApplicationName}-{newHostInformation.Port}",
-                    Name = $"{newHostInformation.ApplicationName}-{newHostInformation.Port}",
+                    Id = $"{newHostInformation.HostName}-{newHostInformation.Port}",
+                    Name = $"{newHostInformation.HostName}-{newHostInformation.Port}",
                     Tags = new[]
                         {
                             $"traefik.frontend.rule=Host:{newHostInformation.HostName}",

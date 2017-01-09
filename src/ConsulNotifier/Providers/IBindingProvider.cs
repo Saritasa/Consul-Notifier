@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Serilog;
+using System.Collections.Generic;
 
 namespace ConsulNotifier.Providers
 {
@@ -10,6 +11,6 @@ namespace ConsulNotifier.Providers
         /// <summary>
         /// Returning information about endpoints.
         /// </summary>
-        IEnumerable<EndpointInformation> GetRunningEndpointsInformation();
+        IEnumerable<EndpointInformation> GetRunningEndpointsInformation(ILogger logger);
     }
 }
