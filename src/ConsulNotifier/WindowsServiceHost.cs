@@ -37,7 +37,11 @@ namespace ConsulNotifier
             try
             {
                 Configure();
-                _notifier = new Notifier(_logger, new IISBindingProvider(), new ConsulServicesProvider(_logger));
+                _notifier = NotifierFactory.Create(x =>
+                {
+                    x.UseBindingProvider(new IISBindingProvider());
+                    x.UseLogger(_logger);
+                });
 
                 _logger.Debug("Service starting.");
 

@@ -69,6 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsulDtos\ConsulServiceDTO.cs" />
+    <Compile Include="NotifierContext.cs" />
+    <Compile Include="NotifierDependencies.cs" />
+    <Compile Include="NotifierFactory.cs" />
     <Compile Include="Providers\EndpointInformation.cs" />
     <Compile Include="Notifier.cs" />
     <Compile Include="Program.cs" />

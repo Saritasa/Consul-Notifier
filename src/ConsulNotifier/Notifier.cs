@@ -117,7 +117,7 @@ namespace ConsulNotifier
                 foreach (var serviceId in serviceIdsForDeregister)
                 {
                     var uri = new Uri($"{_consulEndpoint}/v1/agent/service/deregister/{serviceId}");
-                    var response = await httpClient.GetAsync(uri);
+                    var response = await httpClient.PutAsync(uri, null);
                     if (response.StatusCode != HttpStatusCode.OK)
                     {
                         _logger.Warning($"An error occured while deregistering service {serviceId}, response - {@response}", response);
