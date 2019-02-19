@@ -261,9 +261,8 @@ namespace ConsulNotifier.Providers
         /// <param name="nodeName">Name of node.</param>
         private async Task<dynamic> RetrieveServicesFromNodeAsync(string nodeName)
         {
-            var httpClient = new HttpClient();
             var uriBuilder = new UriBuilder($"{_consulEndpoint}v1/catalog/node/{nodeName}");
-            var responseMessage = await httpClient.GetAsync(uriBuilder.Uri);
+            var responseMessage = await _httpClient.GetAsync(uriBuilder.Uri);
 
             if (responseMessage.StatusCode != HttpStatusCode.OK)
             {
@@ -280,9 +279,8 @@ namespace ConsulNotifier.Providers
         /// </summary>
         private async Task<dynamic> RetrieveCurrentServicesAsync()
         {
-            var httpClient = new HttpClient();
             var uriBuilder = new UriBuilder($"{_consulEndpoint}v1/catalog/services");
-            var responseMessage = await httpClient.GetAsync(uriBuilder.Uri);
+            var responseMessage = await _httpClient.GetAsync(uriBuilder.Uri);
 
             if (responseMessage.StatusCode != HttpStatusCode.OK)
             {
