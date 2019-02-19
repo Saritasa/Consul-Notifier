@@ -4,8 +4,11 @@ using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
+using ConsulNotifier.ConsulDtos;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Serilog;
@@ -23,10 +26,11 @@ namespace ConsulNotifier.Providers
     /// var descriptors = consulServicesProvider.RetrieiveCurrentServiceDescriptors();
     /// ```
     /// </remarks>
-    public class ConsulServicesProvider
+    public class ConsulServiceProvider
     {
         private Regex _ruleRegex = new Regex(@"^(?<ruleName>.+)\=(?<ruleValue>.+)$",
             RegexOptions.Singleline | RegexOptions.Compiled);
+        private HttpClient _httpClient;
 
         private Regex _hostRegex = new Regex(@"^Host\:(?<value>.+)$", RegexOptions.Singleline | RegexOptions.Compiled);
 
@@ -43,9 +47,10 @@ namespace ConsulNotifier.Providers
         /// Ctor.
         /// </summary>
         /// <exception cref="ConfigurationErrorsException">Throws when application has wrong configuration.</exception>
-        public ConsulServicesProvider(ILogger logger)
+        public ConsulServiceProvider(ILogger logger, HttpClient httpClient)
         {
-            _logger = logger.ForContext<ConsulServicesProvider>();
+            _logger = logger.ForContext<ConsulServiceProvider>();
+            _httpClient = httpClient;
 
             InitConfiguration();
         }
@@ -166,13 +171,9 @@ namespace ConsulNotifier.Providers
         /// Returning enumeration of strings like 'helios.umbrella.com-80' where numbers is port of running application
         /// </summary>
         /// <param name="nodeName">Name of node, typicaly name of host machine where running this service.</param>
-        public async Task<IEnumerable<string>> RetrieveServiceNamesFromNodeAsync(string nodeName)
+        public async Task<IEnumerable<string>> RetrieveServiceNamesFromNodeAsync()
         {
-            if (string.IsNullOrWhiteSpace(nodeName))
-            {
-                throw new ArgumentNullException(nameof(nodeName));
-            }
-
+            var nodeName = GetNodeName();
             var result = await RetrieveServicesFromNodeAsync(nodeName);
 
             if (result?.Services == null)
@@ -198,6 +199,61 @@ namespace ConsulNotifier.Providers
 
             return serviceNames;
         }
+
+        public async Task DeregisterServicesAsync(IReadOnlyList<string> serviceIdsForDeregister)
+        {
+            foreach (var serviceId in serviceIdsForDeregister)
+            {
+                var uri = new Uri($"{_consulEndpoint}/v1/agent/service/deregister/{serviceId}");
+                var response = await _httpClient.PutAsync(uri, null);
+                if (response.StatusCode != HttpStatusCode.OK)
+                {
+                    _logger.Warning($"An error occured while deregistering service {serviceId}, response - {@response}", response);
+                }
+                else
+                {
+                    _logger.Information($"Successfully deregistered service {serviceId} from node {GetNodeName()}");
+                }
+            }
+        }
+
+        public async Task SendNewServicesAsync(IReadOnlyList<EndpointInformation> newHostInformations)
+        {
+            var dtos = PrepareDtos(newHostInformations);
+            var uri = new Uri($"{_consulEndpoint}/v1/agent/service/register");
+
+            if (!dtos.Any())
+            {
+                _logger.Information("Nothing new to send.");
+                return;
+            }
+
+            _logger.Information("Trying to send new services.");
+
+            try
+            {
+                foreach (var registryDto in dtos)
+                {
+                    _logger.Information("Sending {@dto}", registryDto);
+                    var serializedDto = JsonConvert.SerializeObject(registryDto);
+                    var stringContent = new StringContent(serializedDto, Encoding.UTF8, "application/json");
+
+                    var response = await _httpClient.PutAsync(uri, stringContent, CancellationToken.None);
+                    _logger.Information("Sended {@dto}", registryDto);
+
+                    if (response.StatusCode != HttpStatusCode.OK)
+                    {
+                        _logger.Warning("An error occured while sending new service, response - {@response}", response);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(ex, "Can't send messages");
+            }
+        }
+
+        private string GetNodeName() => Dns.GetHostName();
 
         /// <summary>
         /// Retrieving services details and node from specified node.
@@ -236,6 +292,34 @@ namespace ConsulNotifier.Providers
             var rawJson = await responseMessage.Content.ReadAsStringAsync();
 
             return JsonConvert.DeserializeObject<dynamic>(rawJson);
+        }
+
+        /// <summary>
+        /// Preparing dtos to send.
+        /// </summary>
+        private List<ConsulServiceDTO> PrepareDtos(IReadOnlyList<EndpointInformation> newHostInformations)
+        {
+            var newRegistryDtos = new List<ConsulServiceDTO>();
+            foreach (var newHostInformation in newHostInformations)
+            {
+                var newRegistryDto = new ConsulServiceDTO
+                {
+                    Address = newHostInformation.Address,
+                    Port = newHostInformation.Port,
+                    Id = $"{newHostInformation.HostName}-{newHostInformation.Port}",
+                    Name = $"{newHostInformation.HostName}-{newHostInformation.Port}",
+                    Tags = new[]
+                        {
+                            $"traefik.frontend.rule=Host:{newHostInformation.HostName}",
+                            "traefik.tags=app",
+                            "traefik.backend.loadbalancer=drr"
+                        }
+                };
+
+                newRegistryDtos.Add(newRegistryDto);
+            }
+
+            return newRegistryDtos;
         }
     }
 }

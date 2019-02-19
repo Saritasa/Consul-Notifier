@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Net.Http;
 using System.Threading.Tasks;
 using ConsulNotifier.Providers;
 using Serilog;
@@ -16,6 +17,7 @@ namespace ConsulNotifier
         private Notifier _notifier;
         private volatile bool _isStopping;
         private TimeSpan _timeSpanBetweenNotifications;
+        private static HttpClient httpClient = new HttpClient();
 
         /// <summary>
         /// Debug level mark key.
@@ -41,6 +43,7 @@ namespace ConsulNotifier
                 {
                     x.UseBindingProvider(new IISBindingProvider());
                     x.UseLogger(_logger);
+                    x.UseHttpClient(httpClient);
                 });
 
                 _logger.Debug("Service starting.");

@@ -1,4 +1,5 @@
-﻿using ConsulNotifier.Providers;
+﻿using System.Net.Http;
+using ConsulNotifier.Providers;
 using Serilog;
 
 namespace ConsulNotifier
@@ -29,6 +30,14 @@ namespace ConsulNotifier
         public void UseBindingProvider(IBindingProvider bindingProvider)
         {
             notifierContext.BindingProvider = bindingProvider;
+        }
+
+        /// <summary>
+        /// Passing http client, http client should be static.
+        /// </summary>
+        public void UseHttpClient(HttpClient httpClient)
+        {
+            notifierContext.HttpClient = httpClient;
         }
     }
 }

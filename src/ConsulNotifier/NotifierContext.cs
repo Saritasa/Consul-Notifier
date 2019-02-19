@@ -1,4 +1,5 @@
-﻿using ConsulNotifier.Providers;
+﻿using System.Net.Http;
+using ConsulNotifier.Providers;
 using Serilog;
 
 namespace ConsulNotifier
@@ -17,5 +18,10 @@ namespace ConsulNotifier
         /// Bindings provider contract.
         /// </summary>
         public IBindingProvider BindingProvider { get; set; }
+
+        /// <summary>
+        /// Used to send http requests.
+        /// </summary>
+        public HttpClient HttpClient { get; set; }
     }
 }

@@ -1,5 +1,5 @@
-﻿using Serilog;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Serilog;
 
 namespace ConsulNotifier.Providers
 {
